@@ -32,6 +32,17 @@ class linkedlist:
             count+=1
         newNode.next = val.next
         val.next = newNode
+    def deleteAtBegin(self):
+        self.headval = self.headval.next
+    def deleteAnyWhere(self,pos):
+        temp = self.headval
+        count = 0
+        while count<pos:
+            count+=1
+            prev = temp
+            temp = temp.next
+        prev.next = temp.next
+        temp = None
 
 list1 = linkedlist()
 list1.headval = node(1)
@@ -40,7 +51,14 @@ n3 = node(3)
 
 list1.headval.next = n2
 n2.next = n3
+##insertion
+print("##After Insertion###")
 list1.insertAtBegin()
 list1.insertAtEnd()
 list1.insertAnyWhere(2,node(5))
+list1.printlist()
+print()
+print("##After Deletion###")
+list1.deleteAtBegin()
+list1.deleteAnyWhere(3)
 list1.printlist()
