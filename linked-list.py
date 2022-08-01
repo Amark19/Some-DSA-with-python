@@ -15,6 +15,23 @@ class linkedlist:
         new_node = node(0)
         new_node.next = self.headval
         self.headval = new_node
+    def insertAtEnd(self):
+        new_node = node(4)
+        if self.headval is None:
+            self.headval = new_node
+            return
+        val = self.headval
+        while val.next!=None:
+            val=val.next
+        val.next = new_node
+    def insertAnyWhere(self,pos,newNode):
+        count = 1
+        val = self.headval
+        while count<pos:
+            val = val.next
+            count+=1
+        newNode.next = val.next
+        val.next = newNode
 
 list1 = linkedlist()
 list1.headval = node(1)
@@ -24,4 +41,6 @@ n3 = node(3)
 list1.headval.next = n2
 n2.next = n3
 list1.insertAtBegin()
+list1.insertAtEnd()
+list1.insertAnyWhere(2,node(5))
 list1.printlist()
