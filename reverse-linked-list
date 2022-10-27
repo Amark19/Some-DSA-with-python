@@ -9,12 +9,18 @@ class linkedlist:
         prev = None
         nex = None
         cur = self.head
-        # 0 1 2
+        # can be easily visualize by three pointers
+        #0th iteration
+        #none 0    1       2
+        #prev curr next
+        #1st iteration
+        #0    1       2
+        #prev curr next
         while cur!=None:
-            nex = cur.next  # 1 2 null
-            cur.next = prev #null 0 1
-            prev = cur #0 1 2
-            cur = nex #1 2 null
+            nex = cur.next 
+            cur.next = prev 
+            prev = cur
+            cur = nex
         self.head = prev
     def printlist(self):
         printval = self.head
