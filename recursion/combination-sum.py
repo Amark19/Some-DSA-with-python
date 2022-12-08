@@ -6,9 +6,9 @@ class Solution:
             if index >= N or target < 0:
                 return
             if target == 0:
-                #here is only one copy of ls flowing through the program.
-                #So whenever result changes, it also reflects in ans.
-                #That's why copying it breaks the chain and gives you the correct result
+                #here as we r using the same array and manipulating it we don't have different arrays/list which can consume different address
+                #but here as we r using same address for ls so whenever ls is modifying it's value then ans also modifies it's value
+                #so that's why we create copy which create new address/memory from which it will never modify again
                 ans.append(ls.copy())
                 print(ans)
                 return
