@@ -1,15 +1,20 @@
 class Solution:
-    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+        N = len(candidates)
+        candidates.sort()
         ans = []
-        nums.sort()
-        def subsequence(ls,idx):
-            if idx >= len(nums):
-                if ls not in ans:
+        def subsequence(ls,index,target):
+            if index >= N or target < 0:
+                if target == 0:
                     ans.append(ls.copy())
                 return
-            ls.append(nums[idx])
-            subsequence(ls,idx + 1)
-            ls.remove(nums[idx])
-            subsequence(ls,idx + 1)
-        subsequence([],0)
+            if target == 0:
+                ans.append(ls.copy())
+                return
+            ls.append(candidates[index])
+            subsequence(ls,index + 1,target - candidates[index])
+            ls.remove(candidates[index])
+            while index + 1 < len(candidates) and candidates[index] == candidates[index+1]:index+=1
+            subsequence(ls,index + 1,target)
+        subsequence([],0,target)
         return ans
