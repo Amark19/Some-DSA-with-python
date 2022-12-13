@@ -6,7 +6,7 @@
 class Solution:
     def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
         if head is None:return None
-        length,curr = 0,head
+        length , curr = 0 , head
         while curr:curr = curr.next;length += 1
         t = head
         for i in range(k%(length)):
