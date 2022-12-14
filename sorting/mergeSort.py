@@ -7,7 +7,6 @@ def mergeSort(arr):
         mergeSort(r)
         merge(l, r, arr)
 
-
 def merge(l, r, arr):
     i, j, k = 0, 0, 0
     while i < len(l) and j < len(r):
