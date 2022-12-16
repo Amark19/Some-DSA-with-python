@@ -1,7 +1,6 @@
 class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
         nums.sort()
-        #-2 -1 0 0 1 2
         ans , su = [] , 0
         for i in range(len(nums)):
             if i > 0 and nums[i] == nums[i-1]:#just continue with next iteration if prev & next val is same cause will be processing same target1
