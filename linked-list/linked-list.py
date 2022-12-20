@@ -44,13 +44,14 @@ class linkedlist:
         prev.next = temp.next
         temp = None
 
-list1 = linkedlist()
-list1.headval = node(1)
+n1 = node(1)
 n2 = node(2)
 n3 = node(3)
 
-list1.headval.next = n2
+n1.next = n2
 n2.next = n3
+
+list1 = linkedlist()
 ##insertion
 print("##After Insertion###")
 list1.insertAtBegin()
