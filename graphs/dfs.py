@@ -21,6 +21,7 @@ g.addEdge(0,2)
 g.addEdge(1,4)
 g.addEdge(2,3)
 g.addEdge(3,4)
+#{0:[1,2],1:[4],2:[3],3:{4}}
 visited = set()
 print(g.travserse(0,visited))
 #0,1
