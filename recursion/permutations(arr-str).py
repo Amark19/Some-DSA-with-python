@@ -13,5 +13,5 @@ class Solution:
                     ls.remove(nums[i])
                     arr[i] = 0
         ans = []
-        pe([],ans,[0 for i in range(len(nums))])
+        pe([],ans,[0 for _ in range(len(nums))])
         return ans

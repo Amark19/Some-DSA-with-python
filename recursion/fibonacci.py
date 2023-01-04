@@ -17,5 +17,5 @@ def fibonacci2(num):
 # 1 + 1 = 2
 # 1 + 2 = 3
 # 2 + 3 = 5
-print(fibonacci(5, 0, 1))
-print(fibonacci2(5))
+print(fibonacci(5, 0, 1))#2^n
+print(fibonacci2(5))#O(N)
