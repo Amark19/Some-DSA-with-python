@@ -26,5 +26,5 @@ class Solution:
         then it backtracks pop last element from ds i.e b so a,a,b
         then tries out current idx to jth index whther its pallindrome or not
         so for we get a,a,bb
-        1.tries out individual then combinations of multiple characters
+        1.tries out individual then subtrings 
         '''
