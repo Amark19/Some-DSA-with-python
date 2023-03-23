@@ -1,17 +1,23 @@
 class Solution:
-    def findTargetSumWays(self, nums: List[int], target: int) -> int:
-        dp = {} # storing states i.e any node value which repeating no need to call recursion call direct take values from it
-
-        def recur(index,val):
-            if index == len(nums):
-                return 1 if target == val else 0
-            if (index,val) in dp:
-                return dp[(index,val)]
-            '''
-            aggegating result i.e no of possible values from left & right
-            '''
-            dp[(index,val)] = recur(index + 1 , val + nums[index]) + recur(index + 1,val - nums[index])
-
-            return dp[(index,val)]
+    def maxProduct(self, nums: List[int]) -> int:
         
-        return recur(0,0)
+
+        # 1 2 3 -4 5 6
+        # 1 -> 1,1
+        # 2 -> 2,2
+        # 3 ->3,6
+        # -4 -> 
+        res = max(nums)
+        cur_min,cur_max = 1,1
+
+        for n in nums:
+            if n==0:
+                cur_min,cur_max = 1,1
+                continue
+            tmp = n*cur_max # necessary because in cur_min cur_max value is changing
+            cur_max = max(n*cur_max,n*cur_min,n)
+            cur_min = min(tmp,n*cur_min,n)# we should also have extreme negative value cause if we have nxt value as -ve then extreme_negative * curr can make max_positive value
+
+            res = max(res,cur_max)
+        return res
+        
