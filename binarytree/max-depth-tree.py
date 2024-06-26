@@ -1,4 +1,4 @@
-class node:
+    class node:
     def __init__(self,val):
         self.left = None
         self.right = None
@@ -18,3 +18,10 @@ root.left.left = node(4)
 root.left.right = node(5)
 
 print(max_depth(root))
+
+            5
+        4       5
+    3         0      4
+2       1  1            6
+            0       1
+                6

@@ -19,3 +19,19 @@ def fibonacci2(num):
 # 2 + 3 = 5
 print(fibonacci(5, 0, 1))#2^n
 print(fibonacci2(5))#O(N)
+
+
+5
+
+a = 1
+b= 1
+sum = 0
+
+# 1 1 2 3 5 8
+
+5
+4
+35
+2 + 0
+
+

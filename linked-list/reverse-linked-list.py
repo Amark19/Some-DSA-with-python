@@ -36,3 +36,9 @@ n1.next = n2
 ls.printlist()
 ls.reverse()
 ls.printlist()
+
+1->2->3->4->5
+
+1.next = 1
+
+2->
