@@ -4,8 +4,8 @@ def uniquePathsWithObstacles(obstacleGrid) -> int:
         if i < 0 or j < 0: return 0
         if arr[i][j] == 1: return 0
         up = recur(arr, i - 1, j)
-        down = recur(arr, i, j - 1)
-        return up + down
+        left = recur(arr, i, j - 1)
+        return up + left
 
     i = len(obstacleGrid)
     j = len(obstacleGrid[0])

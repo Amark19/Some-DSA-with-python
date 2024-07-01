@@ -8,9 +8,9 @@ for i in range(m):
         if i < 0 or j < 0: dp[j] = 0;continue
         if obstacleGrid[i][j] == 1:dp[j] = 0;continue
         if i==0 and j==0:dp[j] = 1;continue
-        up,down = 0,0
+        up,left = 0,0
         if i>0:up = temp[j]
-        if j>0:down = dp[j-1]
-        dp[j] = up + down
+        if j>0:left = dp[j-1]
+        dp[j] = up + left
     temp = dp.copy()
 print( temp[n-1])
