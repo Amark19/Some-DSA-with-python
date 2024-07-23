@@ -1,5 +1,5 @@
 class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum(self, candidates, target: int):
         N = len(candidates)
         ans = []
         def subsequence(ls,index,target):
@@ -17,3 +17,6 @@ class Solution:
             subsequence(ls,index + 1,target)
         subsequence([],0,target)
         return ans
+
+sol = Solution()
+print(sol.combinationSum([1,0,2,0,3],3))
