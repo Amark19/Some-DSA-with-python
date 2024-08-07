@@ -1,4 +1,4 @@
-class Solution:
+    class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         dp_arr = [1]*len(nums)
         for i in range(len(nums) - 1,-1,-1):
