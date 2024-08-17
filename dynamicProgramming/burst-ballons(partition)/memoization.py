@@ -22,7 +22,7 @@ def maxCoins(self, nums: List[int]) -> int:
         if i > j: return 0
         if dp[i][j] != -1: return dp[i][j]
         mx = float("-inf")
-        for k in range(i, j + 1):
+        for k in range(i, j + 1):   
             collection = nums[i - 1] * nums[k] * nums[j + 1] + recur(i, k - 1) + recur(k + 1, j)
             mx = max(collection, mx)
         dp[i][j] = mx
