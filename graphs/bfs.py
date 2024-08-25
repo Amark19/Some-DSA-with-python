@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class graph:
     def __init__(self):
         self.graph = defaultdict(list)
@@ -28,3 +29,14 @@ queue = []
 queue.append(0)
 visited = set()
 print(g.travserse(0, queue, visited))
+## level wise
+# if graph is like this
+# 0
+# | \
+# 1  2
+# |   |
+# 4   3
+# |
+# 5
+
+# then output will be {0, (1, 2), (3, 4),5}
