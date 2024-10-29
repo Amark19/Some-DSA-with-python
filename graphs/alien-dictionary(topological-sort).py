@@ -33,4 +33,4 @@ class Solution:
                 indegree[nd] -= 1
                 if indegree[nd] == 0:
                     q.append(nd)
-        return ''.join(chr(i + ord('a')) for i in top)
+        return ''.join(chr(i + ord('a')) for i in top)  

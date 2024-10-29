@@ -15,3 +15,5 @@ class Solution:
                 traverse(node, visted_arr)
                 cnt += 1
         return cnt
+
+# connected components problem
