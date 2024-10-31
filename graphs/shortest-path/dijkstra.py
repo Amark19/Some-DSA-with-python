@@ -20,3 +20,7 @@ class Solution:
                     heapq.heappush(que, (dist_arr[curr_node], curr_node))
 
         return dist_arr
+
+sol = Solution()
+# run on this test case A → B (4), A → C (2), B → C (-3)
+print(sol.dijkstra(3, [[[1, 4], [2, 2]], [[2, -3]], []], 0)) # [0, 1, -2]
