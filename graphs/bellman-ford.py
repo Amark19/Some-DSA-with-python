@@ -2,8 +2,7 @@ class Solution:
     '''
     Function to implement Bellman Ford
     V: nodes in graph
-    edges: adjacency list for the graph
-    S: Source
+    edges: adjacency list for the graph,l
     '''
 
     def bellmanFord(self, V, edges, src):
