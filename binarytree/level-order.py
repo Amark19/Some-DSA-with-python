@@ -7,8 +7,8 @@
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         from collections import defaultdict
-        if root is None:return []
-        ans,q = [[root.val]],[root]
+        if root is None: return []
+        ans, q = [[root.val]], [root]
         while q:
             tmp = []
             for i in range(len(q)):

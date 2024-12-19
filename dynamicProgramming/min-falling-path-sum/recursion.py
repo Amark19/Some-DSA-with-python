@@ -9,7 +9,8 @@ def minFallingPathSum(matrix) -> int:
         up = matrix[i][j] + recur(i - 1, j)
         right = matrix[i][j] + recur(i - 1, j + 1)
         return min(left, up, right)
+
     x = float("inf")
     for i in range(1, n + 1):
-        x = min(x,recur(n - 1, n - i))
+        x = min(x, recur(n - 1, n - i))
     return x

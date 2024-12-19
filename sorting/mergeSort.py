@@ -1,11 +1,12 @@
 def mergeSort(arr):
     if len(arr) > 1:
-        mid = len(arr)//2
+        mid = len(arr) // 2
         l = arr[:mid]
         r = arr[mid:]
         mergeSort(l)
         mergeSort(r)
         merge(l, r, arr)
+
 
 def merge(l, r, arr):
     i, j, k = 0, 0, 0

@@ -7,7 +7,7 @@
 # Merge sort approach
 class Solution:
     def mergeTwoLists(
-        self, list1: Optional[ListNode], list2: Optional[ListNode]
+            self, list1: Optional[ListNode], list2: Optional[ListNode]
     ) -> Optional[ListNode]:
         curr1, curr2, curr3 = list1, list2, ListNode()
         demo = curr3

@@ -9,7 +9,7 @@ class Solution:
         ls = []
         while head:
             if head in ls: return 1
-            ls.append(head);
+            ls.append(head)
             head = head.next
         return 0
 

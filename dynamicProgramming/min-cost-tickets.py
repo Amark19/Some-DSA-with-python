@@ -1,15 +1,16 @@
 class Solution:
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
-        dp = {} #caching
+        dp = {}  # caching
+
         def min_dp(i):
             if i == len(days):
                 return 0
-            if i in dp: #do we have minimum value for value at i ? that we stored in dp
+            if i in dp:  # do we have minimum value for value at i ? that we stored in dp
                 return dp[i]
 
-            dp[i] =float('inf')
+            dp[i] = float('inf')
 
-            for d,c in zip([1,7,30],costs): # [1,7,30] is incremental factor
+            for d, c in zip([1, 7, 30], costs):  # [1,7,30] is incremental factor
                 '''
                 dp[i] = min(dp[i],c + min_dp(i+d)])
 
@@ -20,7 +21,7 @@ class Solution:
                 '''
 
                 j = i
-                while j < len(days) and days[j] < days[i] + d:# handle next upcoming value
+                while j < len(days) and days[j] < days[i] + d:  # handle next upcoming value
                     '''
                     [1,4,6]
                     at j=0 , 1<2 (for d == 1)
@@ -28,6 +29,7 @@ class Solution:
                     so next value to pass is 4
                     '''
                     j += 1
-                dp[i] = min(dp[i],c + min_dp(j))
+                dp[i] = min(dp[i], c + min_dp(j))
             return dp[i]
+
         return min_dp(0)

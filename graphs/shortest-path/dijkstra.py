@@ -21,6 +21,7 @@ class Solution:
 
         return dist_arr
 
+
 sol = Solution()
 # run on this test case A → B (4), A → C (2), B → C (-3)
-print(sol.dijkstra(3, [[[1, 4], [2, 2]], [[2, -3]], []], 0)) # [0, 1, -2]
+print(sol.dijkstra(3, [[[1, 4], [2, 2]], [[2, -3]], []], 0))  # [0, 1, -2]

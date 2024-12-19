@@ -17,3 +17,6 @@ def arrangbst(ls):
     return root
 root = arrangbst(nums)
 return root
+
+# 1 2 3 4 5 6
+

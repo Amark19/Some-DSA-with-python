@@ -33,9 +33,10 @@ class Solution:
             for row in range(n):
                 if isok(row, col, board, n):
                     board[row][col] = 'Q'
-                    tosolve(col+1, board)
+                    tosolve(col + 1, board)
                     board[row][col] = '.'
+
         ans = []
-        board = [['.' for _ in range(n)]for _ in range(n)]
+        board = [['.' for _ in range(n)] for _ in range(n)]
         tosolve(0, board)
         return ans

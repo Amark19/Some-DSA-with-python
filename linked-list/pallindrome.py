@@ -3,6 +3,8 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
+
 def isPalindrome(head) -> bool:
     curr = head
     ls = []
@@ -13,8 +15,9 @@ def isPalindrome(head) -> bool:
         return True
     return False
 
+
 head = ListNode(1)
-#ad elements
+# ad elements
 n1 = ListNode(2)
 n2 = ListNode(2)
 n3 = ListNode(1)

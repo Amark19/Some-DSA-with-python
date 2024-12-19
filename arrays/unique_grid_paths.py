@@ -1,6 +1,6 @@
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
-        total_steps = m + n - 2 #m - 1 + n - 1
+        total_steps = m + n - 2  # m - 1 + n - 1
         '''
         if we observe the pattern then we came to know that we will always required m - 1 + n - 1 steps to reach to End.
         example: m = 3, n = 2
@@ -17,7 +17,7 @@ class Solution:
         rdd -> possible combinations 3C1 or 3C2
         '''
         count = 1
-        for i in range(m-1):
+        for i in range(m - 1):
             count *= (total_steps - i) / (i + 1)
         print(count)
         return round(count)

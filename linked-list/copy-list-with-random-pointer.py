@@ -7,6 +7,7 @@ class Node:
         self.random = random
 """
 
+
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         '''
@@ -31,7 +32,7 @@ class Solution:
             3.1 link :- https://www.youtube.com/watch?v=4apaOcK586U
         '''
 
-        dic = {None:None}
+        dic = {None: None}
         curr = head
         while curr:
             dup = Node(curr.val)
