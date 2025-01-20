@@ -3,7 +3,7 @@ def shortestPath(self, edges, n, m, src):
     # create adj
     adj = [[] for _ in range(n)]
     for edge in edges:
-        u,v = edge[0],edge[1]
+        u, v = edge[0], edge[1]
         adj[u].append(v)
         adj[v].append(u)
     dist = [float("inf") for _ in range(n)]

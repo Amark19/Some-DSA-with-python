@@ -4,10 +4,7 @@ class Solution:
         def convertToIn(char):
             return (ord(char) - 96) - 1
 
-        def convertToChar(intg):
-            return
-            # Create adjacency list
-
+        # Create adjacency list
         adj = [[] for _ in range(V)]
         for i in range(n - 1):
             s1 = dict[i]

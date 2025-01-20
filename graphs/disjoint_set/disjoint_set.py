@@ -14,7 +14,7 @@ class DisjointSet:
         if root_x != root_y:  # should not be connected component
             if self.rank[root_x] > self.rank[root_y]:
                 self.parent[root_y] = root_x
-            elif self.rank[root_x] > self.rank[root_y]:
+            elif self.rank[root_x] < self.rank[root_y]:
                 self.parent[root_x] = root_y
             else:
                 self.parent[root_y] = root_x

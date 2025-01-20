@@ -1,11 +1,10 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        max_till_now = -2134567  # max -ve number
-        max_end = 0
-        for i in range(len(nums)):
-            max_end += nums[i]
-            if max_till_now < max_end:
-                max_till_now = max_end
-            if max_end < 0:
-                max_end = 0
-        return max_till_now
+        su = 0
+        max_sum = float("-inf")
+        for num in nums:
+            su += num
+            max_sum = max(max_sum, su)
+            if su < 0:
+                su = 0
+        return -1 if max_sum == float("-inf") else max_sum

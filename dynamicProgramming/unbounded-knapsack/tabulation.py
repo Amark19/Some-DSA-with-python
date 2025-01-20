@@ -5,6 +5,8 @@ wt = [10, 20, 30]
 dp = [[-1 for _ in range(W + 1)] for _ in range(N)]
 for Wt in range(wt[0], W + 1):
     dp[0][Wt] = (Wt // wt[0]) * val[0]
+
+print(dp)
 for idx in range(1, N):
     for Wt in range(W + 1):
         take = float("-inf")
